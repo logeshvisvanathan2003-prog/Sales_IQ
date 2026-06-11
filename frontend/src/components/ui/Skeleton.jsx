@@ -1,23 +1,17 @@
 import React from 'react';
 
-export const Sk = ({ w, h = 16 }) => (
-  <div className="skeleton" style={{ width: w, height: h, borderRadius: 6 }} />
-);
-
 export const MetricSk = () => (
-  <div className="card" style={{ padding: 20 }}>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
-      <div className="skeleton" style={{ width: 40, height: 40, borderRadius: 10 }} />
-    </div>
-    <div className="skeleton" style={{ width: 100, height: 28, marginBottom: 8 }} />
-    <div className="skeleton" style={{ width: 80, height: 12 }} />
+  <div className="card" style={{ padding: 22 }}>
+    <div className="skeleton" style={{ width: 42, height: 42, borderRadius: 12, marginBottom: 16 }} />
+    <div className="skeleton" style={{ width: 110, height: 26, marginBottom: 8, borderRadius: 6 }} />
+    <div className="skeleton" style={{ width: 80, height: 11, borderRadius: 4 }} />
   </div>
 );
 
 export const ChartSk = ({ height = 220 }) => (
-  <div className="card" style={{ padding: 20 }}>
-    <div className="skeleton" style={{ width: 160, height: 18, marginBottom: 8 }} />
-    <div className="skeleton" style={{ width: 100, height: 12, marginBottom: 20 }} />
-    <div className="skeleton" style={{ width: '100%', height: height }} />
+  <div className="card" style={{ padding: 22 }}>
+    <div className="skeleton" style={{ width: 160, height: 16, marginBottom: 8, borderRadius: 6 }} />
+    <div className="skeleton" style={{ width: 100, height: 11, marginBottom: 22, borderRadius: 4 }} />
+    <div className="skeleton" style={{ width: '100%', height, borderRadius: 10 }} />
   </div>
 );

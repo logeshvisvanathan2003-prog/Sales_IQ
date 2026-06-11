@@ -28,11 +28,18 @@ pool.on('error', (err) => {
 
 const query = async (text, params) => {
   const start = Date.now();
+
   try {
     const res = await pool.query(text, params);
+
     if (process.env.NODE_ENV === 'development') {
-      console.log('query', { text: text.substring(0, 80), duration: Date.now() - start, rows: res.rowCount });
+      console.log('query', {
+        text: text.substring(0, 80),
+        duration: Date.now() - start,
+        rows: res.rowCount,
+      });
     }
+
     return res;
   } catch (error) {
     console.error('DB query error:', error);
